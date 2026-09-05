@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Cocktails</title>
+
+    <style>
+        body {
+            background: lab(15.47% 0.23 -7.41 / 0.712);
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 15%;
+            margin: 0;
+        }
+
+        h1 {
+            color: hwb(0 0% 100%);
+            text-shadow: 0 0 10px #fbfeff;
+        }
+
+        #qr {
+            position: relative;
+            display: inline-block;
+            padding: 10px;
+            background: rgb(175, 150, 150);
+            border-radius: 15px;
+        }
+
+        #logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80px;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            border: 4px solid rgb(97, 97, 97);
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>📲 ¡¡ESCANEAME!! 🍸🍾</h1>
+
+    <div id="qr">
+
+        <div id="qrcode"></div>
+
+        <img id="logo" src="logoLB.png" alt="Logo Lubo">
+
+    </div>
+
+    <!-- Librería para generar el código QR -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- Generación del QR -->
+    <script>
+        new QRCode(document.getElementById("qrcode"), {
+            text: "https://irving201.github.io/coctel/cocteles.html",
+            width: 250,
+            height: 250
+        });
+    </script>
+
+    <footer>
+        <p>Lubo Services 2026 © Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
+
+
+<!-- En la terminal CADA MODIFICACION PONER
+git  add .
+git commit -m "cambios"
+git push
+
+(SIN force después de esto 👍) -->
